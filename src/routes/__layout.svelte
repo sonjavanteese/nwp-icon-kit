@@ -1,16 +1,20 @@
 <script>
-  import "../app.css"
+	import "../app.css"
   import { page } from '$app/stores'
 	import { iconlib } from '$lib/nwp-icons/'
   import Header from '$lib/header/Header.svelte'
+  import Sidebar from '$lib/header/Sidebar.svelte'
+  import Auth from '$lib/auth/Auth.svelte'
 </script>
 {@html iconlib}
-
+<Sidebar />
 <Header />
 
-<main>
- <slot /> 
-</main>
+<Auth>
+   <slot /> 
+</Auth>
+
+
 
 
 <style windi:preflights:global windi:safelist:global global>

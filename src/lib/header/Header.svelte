@@ -1,32 +1,34 @@
 <script>
-  import { page } from "$app/stores";
+	import { page } from "$app/stores";
   import { Icon } from "$lib/nwp-icons/";
-  // import logo from "./svelte-logo-blue.svg";
+  import Modal from "$lib/modal/modal.svelte";
+  import { isMod, isSb } from '$lib/stores.js';
   import logoDark from "./svelte-logo-dark.svg";
 </script>
-
-<header class="bg-blue-800 text-white shadow-xl">
+<Modal />
+<header class="bg-gray-50 text-gray-800 text-white border-b shadow-xl">
   <nav class="flex justify-between items-center container mx-auto py-4 px-4">
-    <a href="/" class="" class:active={$page.path === "/"}>
-		<!-- <img src={logo} alt="SvelteKit" /> -->
-		<Icon name="home" />
-		</a>
-    <span class="text-3xl font-semibold">nwp-app</span>
-    <a href="/icons" class="text-2xl" class:active={$page.path === "/icons"}>
-      <img src={logoDark} alt="SvelteKit" />
+     <!--  {#if $page.path === '/'}
+      <span on:click={() => isMod.set(true)} class="text-2xl cursor-pointer"><Icon name="cog" /></span>
+      {:else}
+      <a href="/"><Icon name="goback" /></a>
+      {/if} -->
+    <a href="/" class="text-3xl font-semibold flex-grow">
+      <img src="https://nwp-cgn.de/media/uploads/big/a67a7730cb8f9e6aa0cb09a082a426bc.png" alt="nwp-studio">
     </a>
+    <span on:click={() => isSb.set(true)} class="text-3xl text-gray-600 cursor-pointer">
+      &#9776;
+    </span>
   </nav>
 </header>
 
+
+
 <style>
-  a {
+ a {
     @apply text-2xl;
   }
-  a.active {
-    @apply bg-opacity-10 text-gray-200;
-  }
   img {
-	  width: 2rem;
-	  height: 2rem;
+	  max-height: 2rem;
   }
 </style>

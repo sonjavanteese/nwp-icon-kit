@@ -5,10 +5,10 @@
    $: console.log($page.params)
  </script>
  
- 
+ <main>
  <section class="page-container">
   <nav class="flex items-center mb-4">
-    <a href="/" class="text-blue-800 text-lg font-medium">Icon List</a>
+    <a href="/list" class="text-blue-800 text-lg font-medium">Icon List</a>
     <span class="flex-grow"></span>
     <a href="/icons" class="text-blue-800 text-lg font-medium">Icon Libary</a>
   </nav>
@@ -31,6 +31,7 @@
   
 
  </section>
+</main>
  
  
  <style>

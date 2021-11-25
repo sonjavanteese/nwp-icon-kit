@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "@sveltejs/adapter-vercel": "next",
+    "@windicss/plugin-animations": "^1.0.9",
     "@sveltejs/kit": "next",
     "svelte": "^3.42.6",
     "svelte-windicss-preprocess": "^4.1.7",

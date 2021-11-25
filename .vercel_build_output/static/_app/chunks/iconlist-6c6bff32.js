@@ -1,0 +1,1 @@
+const o=["bookmark","books","cog","compass","cross","css","database","display","download","earth","edit","film","filter","folder-o","folder","globe","go","goback","home","hsp","html","image","info","lib","link","music","profile","studio","text","video"];export{o as i};

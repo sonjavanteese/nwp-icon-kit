@@ -1,25 +1,22 @@
 <script>
+	import { isMod } from '$lib/stores.js';
   import { Icon, iconlist } from "$lib/nwp-icons/";
 </script>
 
+<main>
+  <section class="page-container">
+      <nav class="flex items-center justify-start mb-4">
+        <span class="flex-grow"></span>
+        <a href="/list" class="text-blue-800 text-lg font-medium mr-1"> Icons</a>
+        <a href="/icons" class="text-blue-800 text-lg font-medium mr-1"> Libary</a>
+          <a href="/utf8" class="text-blue-800 text-lg font-medium mr-1"> UTF-8</a>
+          <!-- <a href="/icons" class="text-blue-800 text-lg font-medium"> Icon Libary</a> -->
+      </nav>
+      <h1 class="py-4 text-center border-b mb-8">
+        Nwp Startseite
+      </h1>
+      <div class="py-2"></div>
+      <img src="https://nwp-cgn.de/media/uploads/big/59ed16cc9bfd8b964b4cb7168c09134c.png" alt="">
+  </section>
+</main>
 
-<section class="page-container">
-  <nav class="flex items-center mb-4"><span class="flex-grow"></span><a href="/icons" class="text-blue-800 text-lg font-medium">Icon Libary</a></nav>
-  <h1 class="py-4 text-center border-b mb-8">Nwp Icon List</h1>
-
-  <div class="flex flex-col divide-y divide-opacity-10">
-    {#each iconlist as icon}
-      <a href="/icons" class="flex items-center px-4 py-3">
-          <div class="text-2xl font-medium">{icon.toUpperCase()}</div>
-          <span class="flex-grow"></span>
-          <Icon name={icon} />
-      </a>
-    {/each}
-  </div> 
-</section>
-
-
-<style>
-  
-
-</style>

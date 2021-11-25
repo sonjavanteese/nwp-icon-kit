@@ -2,9 +2,12 @@
   import { Icon, iconlist } from "$lib/nwp-icons/";
 </script>
 
-
+<main>
 <section class="page-container">
-   <nav class="flex items-center mb-4"><span class="flex-grow"></span><a href="/" class="text-blue-800 text-lg font-medium">Icon List</a></nav>
+   <nav class="flex items-center mb-4">
+    <a href="/" class="text-xl text-blue-800">&#10094; back</a>
+    <div class="flex-grow"></div>
+    <a href="/list" class="text-blue-800 text-lg font-medium">Icon List</a></nav>
   
   <h1 class="py-4 text-center border-b mb-8">Nwp Icon Libary</h1>
 
@@ -19,7 +22,7 @@
     {/each}
   </div> 
 </section>
-
+</main>
 
 <style>
   .css-grid {
